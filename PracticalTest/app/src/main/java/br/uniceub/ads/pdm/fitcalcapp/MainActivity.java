@@ -1,6 +1,7 @@
 package br.uniceub.ads.pdm.fitcalcapp;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -83,9 +84,76 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.tela_principal);
 
-        
+        CarregarTelaPrincipal();
 
             // Just testing smth
+    }
+    public void CarregarTelaPrincipal() {
+        setContentView(R.layout.tela_principal);
+
+        tela_principal_btn_calculadora_imc = findViewById(R.id.buttonTelaCalcImc);
+
+        tela_principal_btn_calculadora_imc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarregarTelaCalculadoraImc();
+            }
+        });
+
+        tela_principal_btn_calculadora_peso = findViewById(R.id.buttonTelaCalcPeso);
+
+        tela_principal_btn_calculadora_peso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarregarTelaCalculadoraPeso();
+            }
+        });
+
+        tela_principal_btn_calculadora_altura = findViewById(R.id.buttonTelaCalcAltura);
+
+        tela_principal_btn_calculadora_altura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarregarTelaCalculadoraAltura();
+            }
+        });
+    }
+    public void CarregarTelaCalculadoraImc() {
+        setContentView(R.layout.calculadora_imc);
+
+        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaCalcImcVoltar);
+
+        tela_calculadora_peso_btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarregarTelaPrincipal();
+            }
+
+        });
+
+    }
+    public void CarregarTelaCalculadoraPeso() {
+        setContentView(R.layout.calculadora_peso);
+
+        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaCalcPesoVoltar);
+
+        tela_calculadora_peso_btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarregarTelaPrincipal();
+            }
+        });
+    }
+    public void CarregarTelaCalculadoraAltura() {
+        setContentView(R.layout.calculadora_altura);
+
+        tela_calculadora_altura_btn_voltar = findViewById(R.id.buttontelaCalcAlturaVoltar);
+
+        tela_calculadora_altura_btn_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CarregarTelaPrincipal();
+            }
         });
     }
 }
