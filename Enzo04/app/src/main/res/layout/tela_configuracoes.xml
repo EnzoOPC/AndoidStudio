@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,SpUsage" >
+
+
+    <Button
+        android:id="@+id/button_dark_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Dark Mode"
+        tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:text="Config 2"
+        tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/tela_config_btn_sair"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
