@@ -18,6 +18,7 @@
         android:text="Selecione seu gênero" />
 
     <RadioGroup
+        android:id="@+id/radioGroupTelaImc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 

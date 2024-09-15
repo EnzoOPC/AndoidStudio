@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -86,7 +87,10 @@ public class MainActivity extends AppCompatActivity {
 
         CarregarTelaPrincipal();
 
-            // Just testing smth
+        tela_calculadora_altura_btn_calcular = findViewById(R.id.buttonTelaCalcImc);
+
+
+
     }
     public void CarregarTelaPrincipal() {
         setContentView(R.layout.tela_principal);
@@ -117,9 +121,48 @@ public class MainActivity extends AppCompatActivity {
                 CarregarTelaCalculadoraAltura();
             }
         });
+
+
     }
     public void CarregarTelaCalculadoraImc() {
         setContentView(R.layout.calculadora_imc);
+
+
+        String testRadioButton = "";
+
+        RadioGroup tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
+
+        int selectedId = tela_calculadora_imc_radio_group.getCheckedRadioButtonId();
+
+        if (selectedId != -1) {
+
+            RadioButton selectedRadioButton = findViewById(selectedId);
+
+            String selectedText = selectedRadioButton.getText().toString();
+
+            if (selectedText.equals("radioButtonTelaAlturaMasculino")) {
+               testRadioButton = "Se você está lendo isso, homem estáva selecionado";
+            } else {
+               testRadioButton = "Se você está lendo isso, mulher";
+            }
+        }
+
+
+        // Método para mostrar um texto na tela quando um certo botão é clicado
+
+        tela_calculadora_imc_btn_calcular = findViewById(R.id.buttonTelaCalcImcCalcular);
+
+        final TextView imcCalculado = findViewById(R.id.textViewImcDisplay);
+
+
+        String finalTestRadioButton = testRadioButton;
+        tela_calculadora_imc_btn_calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imcCalculado.setText(finalTestRadioButton);
+            }
+        });
+
 
         tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaCalcImcVoltar);
 
@@ -130,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
 
     }
     public void CarregarTelaCalculadoraPeso() {
