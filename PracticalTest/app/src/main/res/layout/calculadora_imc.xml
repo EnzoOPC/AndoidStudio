@@ -40,16 +40,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
-            android:text="Altura (em metros)" />
+            android:inputType="number"
+            android:hint="Altura (em metros)" />
 
         <EditText
             android:id="@+id/TelaCalcImcEditTextPeso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text"
-            android:text="Peso (em quilos)" />
+            android:inputType="number"
+            android:hint="Peso (em quilos)" />
 
         <Button
             android:id="@+id/buttonTelaCalcImcCalcular"
