@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         tela_calculadora_imc_btn_calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imcCalculado.setText("Esse cocô n funciona");
+                imcCalculado.setText(finalTestRadioButton);
             }
         });
 
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
     public void CarregarTelaCalculadoraPeso() {
         setContentView(R.layout.calculadora_peso);
 
-        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaPesoVoltar);
+        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttonTelaCalcPesoVoltar);
 
         tela_calculadora_peso_btn_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
     public void CarregarTelaCalculadoraAltura() {
         setContentView(R.layout.calculadora_altura);
 
-        tela_calculadora_altura_btn_voltar = findViewById(R.id.buttontelaCalcAlturaVoltar);
+        tela_calculadora_altura_btn_voltar = findViewById(R.id.buttonTelaCalcAlturaVoltar);
 
         tela_calculadora_altura_btn_voltar.setOnClickListener(new View.OnClickListener() {
             @Override

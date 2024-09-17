@@ -16,7 +16,6 @@
         android:fontFamily="sans-serif-black"
         android:textSize="23dp"
         android:textColor="#defff2"
-        android:layout_marginTop="210dp"
         android:text="Bem Vindo(a)" />
 
     <Button
@@ -50,6 +49,7 @@
         android:fontFamily="sans-serif-black"
         android:textSize="18dp"
         android:backgroundTint="#0ff4c6"
+        android:layout_marginBottom="350dp"
         android:text="Calculadora de Altura Ideal" />
 
 </LinearLayout>

@@ -13,7 +13,7 @@
         android:fontFamily="sans-serif-black"
         android:textSize="23dp"
         android:textColor="#defff2"
-        android:layout_marginTop="210dp"
+
         android:text="Calculadora de Peso Ideal" />
 
     <TextView
@@ -123,6 +123,7 @@
         android:textColor="#defff2"
         android:fontFamily="sans-serif-black"
         android:backgroundTint="#464f51"
+        android:layout_marginBottom="120dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Voltar" />
