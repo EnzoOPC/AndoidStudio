@@ -13,7 +13,7 @@
         android:fontFamily="sans-serif-black"
         android:textSize="23dp"
         android:textColor="#defff2"
-        android:paddingTop="50dp"
+        android:layout_marginTop="210dp"
         android:text="IMC - Calculadora de Massa Corporal" />
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content" >
 
         <RadioButton
-            android:id="@+id/radioButtonTelaAlturaMasculino"
+            android:id="@+id/radioButtonTelaImcMasculino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
@@ -44,7 +44,7 @@
             android:theme="@style/radioButtonStyle" />
 
         <RadioButton
-            android:id="@+id/radioButtonTelaAlturaFeminino"
+            android:id="@+id/radioButtonTelaImcFeminino"
             android:fontFamily="sans-serif-black"
             android:textColor="#defff2"
             android:textSize="18dp"
@@ -104,7 +104,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonTelaImcLimpar"
             android:layout_width="125dp"
             android:layout_marginRight="15dp"
             android:textColor="#defff2"

@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
             String selectedText = selectedRadioButton.getText().toString();
 
-            if (selectedText.equals("radioButtonTelaAlturaMasculino")) {
+            if (selectedText.equals("radioButtonTelaImcMasculino")) {
                testRadioButton = "Se você está lendo isso, homem estáva selecionado";
             } else {
                testRadioButton = "Se você está lendo isso, mulher";
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         tela_calculadora_imc_btn_calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imcCalculado.setText(finalTestRadioButton);
+                imcCalculado.setText("Esse cocô n funciona");
             }
         });
 
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
     public void CarregarTelaCalculadoraPeso() {
         setContentView(R.layout.calculadora_peso);
 
-        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaCalcPesoVoltar);
+        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaPesoVoltar);
 
         tela_calculadora_peso_btn_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
