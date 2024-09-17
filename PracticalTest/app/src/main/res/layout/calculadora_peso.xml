@@ -32,7 +32,7 @@
         android:layout_height="wrap_content" >
 
         <RadioButton
-            android:id="@+id/radioButtonTelaPesoMasculino"
+            android:id="@+id/radioButtonTelaCalcPesoMasculino"
             android:checked="false"
             android:fontFamily="sans-serif-black"
             android:textColor="#defff2"
@@ -43,7 +43,7 @@
             android:text="Homem" />
 
         <RadioButton
-            android:id="@+id/radioButtonTelaPesoFeminino"
+            android:id="@+id/radioButtonTelaCAlcPesoFeminino"
             android:checked="false"
             android:fontFamily="sans-serif-black"
             android:textColor="#defff2"
@@ -85,7 +85,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonTelaPesoLimpar"
+            android:id="@+id/buttonTelaCalcPesoLimpar"
             android:layout_width="125dp"
             android:layout_marginRight="15dp"
             android:textColor="#defff2"
@@ -96,7 +96,7 @@
             android:text="Limpar" />
 
         <Button
-            android:id="@+id/buttonTelaPesoCalcular"
+            android:id="@+id/buttonTelaCalcPesoCalcular"
             android:textColor="#defff2"
             android:fontFamily="sans-serif-black"
             android:textSize="18dp"
@@ -118,7 +118,7 @@
         android:text="PESO AQUI" />
 
     <Button
-        android:id="@+id/buttontelaPesoVoltar"
+        android:id="@+id/buttonTelaCalcPesoVoltar"
         android:layout_marginTop="10dp"
         android:textColor="#defff2"
         android:fontFamily="sans-serif-black"
