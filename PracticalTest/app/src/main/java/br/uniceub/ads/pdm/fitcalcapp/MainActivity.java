@@ -1,7 +1,10 @@
 package br.uniceub.ads.pdm.fitcalcapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -10,10 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,19 +94,22 @@ public class MainActivity extends AppCompatActivity {
 
         CarregarTelaPrincipal();
 
-        tela_calculadora_altura_btn_calcular = findViewById(R.id.buttonTelaCalcImc);
-
-
+         // tela_calculadora_altura_btn_calcular = findViewById(R.id.buttonTelaCalcImc);
 
     }
+
+
+
     public void CarregarTelaPrincipal() {
         setContentView(R.layout.tela_principal);
+
 
         tela_principal_btn_calculadora_imc = findViewById(R.id.buttonTelaCalcImc);
 
         tela_principal_btn_calculadora_imc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 CarregarTelaCalculadoraImc();
             }
         });
@@ -124,8 +134,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    
+
     public void CarregarTelaCalculadoraImc() {
-        setContentView(R.layout.calculadora_imc);
+       setContentView(R.layout.calculadora_imc);
+
+
 
 
         String testRadioButton = "";
