@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             String selectedText = selectedRadioButton.getText().toString();
 
             if (selectedText.equals("radioButtonTelaImcMasculino")) {
-               testRadioButton = "Se você está lendo isso, homem estáva selecionado";
+               testRadioButton = "Se você está lendo isso, homem estava selecionado";
             } else {
                testRadioButton = "Se você está lendo isso, mulher";
             }
