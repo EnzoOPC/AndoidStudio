@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
 
         CarregarTelaPrincipal();
 
-         // tela_calculadora_altura_btn_calcular = findViewById(R.id.buttonTelaCalcImc);
 
     }
 
@@ -143,26 +142,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        String testRadioButton = "";
-
-        RadioGroup tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
-
-        int selectedId = tela_calculadora_imc_radio_group.getCheckedRadioButtonId();
-
-        if (selectedId != -1) {
-
-            RadioButton selectedRadioButton = findViewById(selectedId);
-
-            String selectedText = selectedRadioButton.getText().toString();
-
-            if (selectedText.equals("radioButtonTelaImcMasculino")) {
-               testRadioButton = "Se você está lendo isso, homem estava selecionado";
-            } else {
-               testRadioButton = "Se você está lendo isso, mulher";
-            }
-        }
-
-
         // Método para mostrar um texto na tela quando um certo botão é clicado
 
         tela_calculadora_imc_btn_calcular = findViewById(R.id.buttonTelaCalcImcCalcular);
@@ -170,13 +149,33 @@ public class MainActivity extends AppCompatActivity {
         final TextView imcCalculado = findViewById(R.id.textViewImcDisplay);
 
 
-        String finalTestRadioButton = testRadioButton;
         tela_calculadora_imc_btn_calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imcCalculado.setText(finalTestRadioButton);
+
+                String testRadioButton = "";
+
+                RadioGroup tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
+
+                int selectedId = tela_calculadora_imc_radio_group.getCheckedRadioButtonId();
+
+                if (selectedId != -1) {
+
+                    RadioButton selectedRadioButton = findViewById(selectedId);
+
+                    String selectedText = selectedRadioButton.getText().toString();
+
+                    if (selectedText.equals("Homem")) {
+                        testRadioButton = "Se você está lendo isso, homem estava selecionado";
+                    } else {
+                        testRadioButton = "Se você está lendo isso, mulher";
+                    }
+                }
+                imcCalculado.setText(testRadioButton);
             }
         });
+
+
 
 
         tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaCalcImcVoltar);
