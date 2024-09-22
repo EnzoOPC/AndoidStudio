@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     public RadioButton tela_calculadora_altura_radio_feminino;
 
-    public EditText tela_calculadora_altura_txt_altura;
+    public EditText tela_calculadora_altura_txt_peso;
 
     public TextView tela_calculadora_altura_resultado;
 
@@ -258,6 +258,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
     public void CarregarTelaCalculadoraPeso() {
         setContentView(R.layout.calculadora_peso);
 
@@ -315,8 +317,57 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void CarregarTelaCalculadoraAltura() {
         setContentView(R.layout.calculadora_altura);
+
+        tela_calculadora_altura_txt_peso = (EditText) findViewById(R.id.TelaCalcAlturaEditTextPeso);
+
+        tela_calculadora_altura_btn_calcular = findViewById(R.id.buttonTelaCalcAlturaCalcular);
+
+        final TextView tela_calculadora_altura_resultado = findViewById(R.id.textViewAlturaDisplay);
+
+
+        tela_calculadora_altura_radio_group = findViewById(R.id.radioGroupTelaAltura);
+
+        // Método para mostrar um texto na tela quando um certo botão é clicado
+
+        tela_calculadora_altura_btn_calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                float IMC = 0;
+
+                int selectedId = tela_calculadora_altura_radio_group.getCheckedRadioButtonId();
+
+                if (selectedId != -1) {
+
+                    RadioButton selectedRadioButton = findViewById(selectedId);
+
+                    String selectedText = selectedRadioButton.getText().toString();
+
+                    if (selectedText.equals("Homem")) {
+                        IMC = 21.7F;
+                    } else {
+                        IMC = 22.7F;
+                    }
+
+                }
+                float peso = Float.parseFloat(tela_calculadora_altura_txt_peso.getText().toString());
+
+                float altura= peso/IMC;
+
+                float alturaCalculada = (float) Math.pow(altura, 0.5);
+
+                String resposta = String.format("%.2f", alturaCalculada);
+
+                tela_calculadora_altura_resultado.setText("Sua altura ideal é: " + resposta + " Metros");
+
+
+
+            }
+        });
 
         tela_calculadora_altura_btn_voltar = findViewById(R.id.buttonTelaCalcAlturaVoltar);
 
