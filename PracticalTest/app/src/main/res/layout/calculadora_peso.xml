@@ -27,6 +27,7 @@
         android:text="Selecione seu gênero" />
 
     <RadioGroup
+        android:id="@+id/radioGroupTelaPeso"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -73,7 +74,7 @@
         android:backgroundTint="@color/cardview_light_background"
         android:ems="10"
         android:paddingBottom="10dp"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:hint="Ex:  1.80" />
 
 
@@ -109,16 +110,6 @@
         android:layout_height="wrap_content"
         android:text="" />
 
-    <TextView
-        android:id="@+id/textViewPesoGrauDePeso"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
-        android:textColor="#defff2"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif-black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
 
     <Button
         android:id="@+id/buttonTelaCalcPesoVoltar"

@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView GrauDePeso = findViewById(R.id.textViewImcGrauDePeso);
 
-        RadioGroup tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
+        tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
 
         // Método para mostrar um texto na tela quando um certo botão é clicado
 
@@ -260,6 +260,51 @@ public class MainActivity extends AppCompatActivity {
     }
     public void CarregarTelaCalculadoraPeso() {
         setContentView(R.layout.calculadora_peso);
+
+        tela_calculadora_peso_txt_altura = (EditText) findViewById(R.id.TelaCalcPesoEditTextAltura);
+
+        tela_calculadora_peso_btn_calcular = findViewById(R.id.buttonTelaCalcPesoCalcular);
+
+        final TextView tela_calculadora_peso_resultado = findViewById(R.id.textViewPesoDisplay);
+
+
+        tela_calculadora_peso_radio_group = findViewById(R.id.radioGroupTelaPeso);
+
+        // Método para mostrar um texto na tela quando um certo botão é clicado
+
+        tela_calculadora_peso_btn_calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                float IMC = 0;
+
+                int selectedId = tela_calculadora_peso_radio_group.getCheckedRadioButtonId();
+
+                if (selectedId != -1) {
+
+                    RadioButton selectedRadioButton = findViewById(selectedId);
+
+                    String selectedText = selectedRadioButton.getText().toString();
+
+                    if (selectedText.equals("Homem")) {
+                        IMC = 21.7F;
+                    } else {
+                        IMC = 22.7F;
+                    }
+
+                }
+                float altura = Float.parseFloat(tela_calculadora_peso_txt_altura.getText().toString());
+
+                float PesoClculado = IMC * (altura*altura);
+
+                String resposta = String.format("%.2f", PesoClculado);
+
+                tela_calculadora_peso_resultado.setText("Seu peso ideal é: " + resposta + "Kg");
+
+
+
+            }
+        });
 
         tela_calculadora_peso_btn_voltar = findViewById(R.id.buttonTelaCalcPesoVoltar);
 
