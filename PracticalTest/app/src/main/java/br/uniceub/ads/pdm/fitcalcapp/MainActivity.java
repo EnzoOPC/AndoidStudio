@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
     public EditText tela_calculadora_imc_txt_altura;
 
+    public EditText tela_calculadora_imc_txt_peso;
+
     public TextView tela_calculadora_imc_resultado;
 
 
@@ -142,20 +144,34 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        // Método para mostrar um texto na tela quando um certo botão é clicado
+        tela_calculadora_imc_txt_altura = (EditText) findViewById(R.id.TelaCalcImcEditTextAltura);
+
+        tela_calculadora_imc_txt_peso = (EditText) findViewById(R.id.TelaCalcImcEditTextPeso);
 
         tela_calculadora_imc_btn_calcular = findViewById(R.id.buttonTelaCalcImcCalcular);
 
         final TextView imcCalculado = findViewById(R.id.textViewImcDisplay);
 
+        final TextView GrauDePeso = findViewById(R.id.textViewImcGrauDePeso);
+
+        RadioGroup tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
+
+        // Método para mostrar um texto na tela quando um certo botão é clicado
 
         tela_calculadora_imc_btn_calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String testRadioButton = "";
+                float altura = Float.parseFloat(tela_calculadora_imc_txt_altura.getText().toString());
 
-                RadioGroup tela_calculadora_imc_radio_group = findViewById(R.id.radioGroupTelaImc);
+                float peso = Float.parseFloat(tela_calculadora_imc_txt_peso.getText().toString());
+
+                float ImcCalculado = peso / (altura*altura);
+
+                String resposta = String.format("%.2f", ImcCalculado);
+
+                String grauDePeso = "";
+
 
                 int selectedId = tela_calculadora_imc_radio_group.getCheckedRadioButtonId();
 
@@ -166,21 +182,70 @@ public class MainActivity extends AppCompatActivity {
                     String selectedText = selectedRadioButton.getText().toString();
 
                     if (selectedText.equals("Homem")) {
-                        testRadioButton = "Se você está lendo isso, homem estava selecionado";
+                       if (ImcCalculado < 18.5) {
+                           grauDePeso = "Você está abaixo do peso.";
+                       }
+
+                       else if (ImcCalculado >= 18.5 && ImcCalculado <= 24.9) {
+                           grauDePeso = "Você está no seu peso ideal.";
+                       }
+
+                       else if (ImcCalculado >= 25 && ImcCalculado <= 29.9) {
+                           grauDePeso = "Você está em estado de pré-obesidade.";
+                       }
+
+                       else  if (ImcCalculado >= 30 && ImcCalculado <= 34.9) {
+                           grauDePeso = "Você está com Obesidade Grau 1.";
+                       }
+
+                       else if (ImcCalculado >= 35 && ImcCalculado <= 39.9) {
+                           grauDePeso = "Você está com Obesidade Grau 2.";
+                       }
+
+                       else {
+                           grauDePeso = "Você está com Obesidade Grau 3";
+                       }
+
+
                     } else {
-                        testRadioButton = "Se você está lendo isso, mulher";
+                        if (ImcCalculado < 18.5) {
+                            grauDePeso = "Você está abaixo do peso.";
+                        }
+
+                        else if (ImcCalculado >= 18.5 && ImcCalculado <= 26.9) {
+                            grauDePeso = "Você está no seu peso ideal.";
+                        }
+
+                        else if (ImcCalculado >= 27 && ImcCalculado <= 32.9) {
+                            grauDePeso = "Você está em estado de pré-obesidade.";
+                        }
+
+                        else  if (ImcCalculado >= 33 && ImcCalculado <= 37.9) {
+                            grauDePeso = "Você está com Obesidade Grau 1.";
+                        }
+
+                        else if (ImcCalculado >= 38 && ImcCalculado <= 44.9) {
+                            grauDePeso = "Você está com Obesidade Grau 2.";
+                        }
+
+                        else {
+                            grauDePeso = "Você está com Obesidade Grau 3";
+                        }
                     }
                 }
-                imcCalculado.setText(testRadioButton);
+
+                imcCalculado.setText("Seu IMC é: " + resposta);
+
+                GrauDePeso.setText(grauDePeso);
             }
         });
 
 
 
 
-        tela_calculadora_peso_btn_voltar = findViewById(R.id.buttontelaCalcImcVoltar);
+        tela_calculadora_imc_btn_voltar = findViewById(R.id.buttontelaCalcImcVoltar);
 
-        tela_calculadora_peso_btn_voltar.setOnClickListener(new View.OnClickListener() {
+        tela_calculadora_imc_btn_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CarregarTelaPrincipal();

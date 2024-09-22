@@ -83,16 +83,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/buttonTelaCalcAlturaLimpar"
-            android:layout_width="125dp"
-            android:layout_marginRight="15dp"
-            android:textColor="#defff2"
-            android:fontFamily="sans-serif-black"
-            android:textSize="18dp"
-            android:backgroundTint="#0ff4c6"
-            android:layout_height="wrap_content"
-            android:text="Limpar" />
+
 
         <Button
             android:id="@+id/buttonTelaCalcAlturaCalcular"
@@ -111,10 +102,11 @@
         android:layout_marginTop="10dp"
         android:textSize="25dp"
         android:textColor="#defff2"
+        android:textAlignment="center"
         android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PESO AQUI" />
+        android:text="" />
 
     <Button
         android:id="@+id/buttonTelaCalcAlturaVoltar"
