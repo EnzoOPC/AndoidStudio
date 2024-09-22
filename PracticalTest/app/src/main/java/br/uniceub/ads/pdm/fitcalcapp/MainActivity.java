@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
         tela_calculadora_imc_btn_calcular = findViewById(R.id.buttonTelaCalcImcCalcular);
 
-        final TextView imcCalculado = findViewById(R.id.textViewImcDisplay);
+        final TextView tela_calculadora_imc_resultado = findViewById(R.id.textViewImcDisplay);
 
         final TextView GrauDePeso = findViewById(R.id.textViewImcGrauDePeso);
 
@@ -232,11 +232,14 @@ public class MainActivity extends AppCompatActivity {
                             grauDePeso = "Você está com Obesidade Grau 3";
                         }
                     }
+
                 }
 
-                imcCalculado.setText("Seu IMC é: " + resposta);
+                tela_calculadora_imc_resultado.setText("Seu IMC é: " + resposta);
 
                 GrauDePeso.setText(grauDePeso);
+
+
             }
         });
 

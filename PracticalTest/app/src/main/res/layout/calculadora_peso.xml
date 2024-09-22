@@ -109,6 +109,17 @@
         android:layout_height="wrap_content"
         android:text="" />
 
+    <TextView
+        android:id="@+id/textViewPesoGrauDePeso"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="#defff2"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
     <Button
         android:id="@+id/buttonTelaCalcPesoVoltar"
         android:layout_marginTop="10dp"

@@ -36,11 +36,12 @@
             android:id="@+id/radioButtonTelaImcMasculino"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#FFFFFF"
             android:checked="false"
             android:fontFamily="sans-serif-black"
+            android:text="Homem"
             android:textColor="#defff2"
             android:textSize="18dp"
-            android:text="Homem"
             android:theme="@style/radioButtonStyle" />
 
         <RadioButton
