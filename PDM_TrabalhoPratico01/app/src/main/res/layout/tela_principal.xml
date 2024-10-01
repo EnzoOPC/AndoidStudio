@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textSize="23dp"
+        android:textColor="#defff2"
+        android:text="Bem Vindo(a)" />
+
+    <Button
+        android:id="@+id/buttonTelaCalcImc"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:textColor="#defff2"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        android:backgroundTint="#0ff4c6"
+        android:text="Calculadora IMC" />
+
+
+    <Button
+        android:id="@+id/buttonTelaCalcPeso"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:textColor="#defff2"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        android:backgroundTint="#0ff4c6"
+        android:text="Calculadora de Peso Ideal" />
+
+    <Button
+        android:id="@+id/buttonTelaCalcAltura"
+        android:layout_width="270dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:textColor="#defff2"
+        android:fontFamily="sans-serif-black"
+        android:textSize="18dp"
+        android:backgroundTint="#0ff4c6"
+        android:layout_marginBottom="350dp"
+        android:text="Calculadora de Altura Ideal" />
+
+</LinearLayout>

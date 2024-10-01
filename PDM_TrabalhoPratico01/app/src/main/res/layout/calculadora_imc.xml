@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/calculadora_imc"
+    android:background="@drawable/gradient_background"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textSize="23dp"
+        android:textColor="#defff2"
+        android:layout_marginTop="210dp"
+        android:text="IMC - Calculadora de Massa Corporal" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:fontFamily="sans-serif"
+        android:textSize="20dp"
+        android:textColor="#defff2"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione seu gênero" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTelaImc"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioButtonTelaImcMasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#defff2"
+            android:textSize="18dp"
+            android:text="Homem"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButtonTelaImcFeminino"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#defff2"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mulher" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:textColor="#defff2"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="textStart"
+        android:layout_width="300dp"
+        android:fontFamily="sans-serif"
+        android:layout_height="wrap_content"
+        android:text="Digite sua altura em metros" />
+
+    <EditText
+        android:id="@+id/TelaCalcImcEditTextAltura"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_light_background"
+        android:ems="10"
+        android:theme="@style/hintTextStyle"
+        android:paddingBottom="10dp"
+        android:inputType="numberDecimal"
+        android:hint="Ex:  1.80" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:textColor="#defff2"
+        android:textSize="20dp"
+        android:textAlignment="textStart"
+        android:layout_width="300dp"
+        android:fontFamily="sans-serif"
+        android:layout_height="wrap_content"
+        android:text="Digite seu peso em quilos" />
+
+    <EditText
+        android:id="@+id/TelaCalcImcEditTextPeso"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingBottom="10dp"
+        android:theme="@style/hintTextStyle"
+        android:backgroundTint="@color/cardview_light_background"
+        android:inputType="numberDecimal"
+        android:hint="Ex:  76" />
+
+    <LinearLayout
+        android:layout_width="275dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/buttonTelaCalcImcCalcular"
+            android:textColor="#defff2"
+            android:fontFamily="sans-serif-black"
+            android:textSize="18dp"
+            android:backgroundTint="#0ff4c6"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewImcDisplay"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="#defff2"
+        android:fontFamily="sans-serif-black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textViewImcGrauDePeso"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="#defff2"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <Button
+        android:id="@+id/buttontelaCalcImcVoltar"
+        android:layout_marginTop="10dp"
+        android:textColor="#defff2"
+        android:fontFamily="sans-serif-black"
+        android:backgroundTint="#464f51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar" />
+
+</LinearLayout>
