@@ -44,11 +44,24 @@
         android:layout_height="wrap_content"
         android:text="Disponível" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:text="Voltar" />
+
     <Button
         android:id="@+id/buttonSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cadastrar" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

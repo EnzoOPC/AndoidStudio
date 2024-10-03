@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public EditText valor;
 
     public Button cadastrar;
+
+    public Button voltar;
 
     List<Produto> produtos = new ArrayList<Produto>();
 
@@ -69,17 +72,34 @@ public class MainActivity extends AppCompatActivity {
 
         cadastrar = findViewById(R.id.buttonSalvar);
 
+        voltar = findViewById(R.id.buttonVoltar);
+
+        nomeProduto = findViewById(R.id.editTextNome);
+        descricao = findViewById(R.id.editTextDescricao);
+        valor = findViewById(R.id.editTextValor);
+
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = nomeProduto.getText().toString();
-                String description = descricao.getText().toString();
+                String name = nomeProduto.getText().toString().trim();
+                String description = descricao.getText().toString().trim();
                 String value = valor.getText().toString();
 
                 double valorDouble = Double.parseDouble(value);
 
                 produtos.add(new Produto(name, description, valorDouble,true, R.drawable.green_v));
 
+                nomeProduto.setText("");
+                descricao.setText("");
+                valor.setText("");
+
+                Toast.makeText(MainActivity.this, "Produto Cadastrado", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 LoadMain();
             }
         });
