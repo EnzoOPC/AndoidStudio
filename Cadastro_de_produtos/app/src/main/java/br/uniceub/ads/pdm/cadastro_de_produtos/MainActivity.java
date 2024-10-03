@@ -3,6 +3,7 @@ package br.uniceub.ads.pdm.cadastro_de_produtos;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -34,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     public Button cadastrar;
 
     public Button voltar;
+
+    public CheckBox checkBox;
+
+    //
 
     List<Produto> produtos = new ArrayList<Produto>();
 
@@ -77,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         nomeProduto = findViewById(R.id.editTextNome);
         descricao = findViewById(R.id.editTextDescricao);
         valor = findViewById(R.id.editTextValor);
+        checkBox = findViewById(R.id.checkBox);
 
         cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +93,13 @@ public class MainActivity extends AppCompatActivity {
 
                 double valorDouble = Double.parseDouble(value);
 
-                produtos.add(new Produto(name, description, valorDouble,true, R.drawable.green_v));
+                if (checkBox.isChecked()) {
+                    produtos.add(new Produto(name, description, valorDouble,true, R.drawable.green_v));
+                }
+                else {
+                    produtos.add(new Produto(name, description, valorDouble,true, R.drawable.red_x));
+                }
+
 
                 nomeProduto.setText("");
                 descricao.setText("");

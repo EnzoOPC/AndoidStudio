@@ -28,7 +28,7 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textViewNome.setText(produtos.get(position).getNome());
-        holder.textViewValor.setText(Double.toString(produtos.get(position).getValor()));
+        holder.textViewValor.setText("R$ " + Double.toString(produtos.get(position).getValor()));
         holder.imageView.setImageResource(produtos.get(position).getImage());
     }
 
